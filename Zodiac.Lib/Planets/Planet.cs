@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Zodiac.Lib.Planets
 {
-   public class Planet
+   public static class Planet
     {
-          public double GetJulDay(int month, int day ,int year)
+          public static double GetJulDay(int month, int day ,int year)
         {
             var im = 0;
             var july_day = 0;
@@ -26,7 +26,7 @@ namespace Zodiac.Lib.Planets
         }
 
 
-        public float GetTerms(int pp, int num, int t)
+        public static float GetTerms(int pp, int num, int t)
         {
            float v = 0.0f;
            

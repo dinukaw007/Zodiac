@@ -25,8 +25,8 @@ namespace Zodiac.UnitTest
         [Test]
         public void PlanetGetJulDayTest()
         {
-            var planet = new Planet();
-            var julDay = planet.GetJulDay(3, 1, 1990);
+           
+            var julDay = Planet.GetJulDay(3, 1, 1990);
             Assert.AreEqual(2447952.0d, julDay);
         }
     }
