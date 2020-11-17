@@ -13,7 +13,6 @@ namespace Zodiac.Lib
         private float TimeZone;
         private double Lat;
         private double Lon;
-        private Planet _planet;
         /// <summary>
         /// ZodiacSign Constructor
         /// </summary>
@@ -39,7 +38,6 @@ namespace Zodiac.Lib
             TimeZone = timeZone;
             Lat = lat;
             Lon = lon;
-            _planet = new Planet();
         }
 
 
@@ -68,22 +66,12 @@ namespace Zodiac.Lib
 
         public void CalcualteZodiacSign()
         {
-            var jd = _planet.GetJulDay(BirthMonth, BirthDay, BirthYear);
-            var time = BirthHour + (BirthMinutes / 60.0);
-            time -= TimeZone;
-            jd += time / 24.0;
-            Console.WriteLine(jd);
-            Ascendant = new PlanetaryDetail(14.24f, "Capricon");
+           Ascendant = new PlanetaryDetail(14.24f, "Capricon");
         }
 
         public void CalcualtePlanetGetJulDay()
         {
-            var jd = _planet.GetJulDay(BirthMonth, BirthDay, BirthYear);
-            var time = BirthHour + (BirthMinutes / 60.0);
-            time -= TimeZone;
-            jd += time / 24.0;
-            Console.WriteLine(jd);
-            Ascendant = new PlanetaryDetail(14.24f, "Capricon");
+           Ascendant = new PlanetaryDetail(14.24f, "Capricon");
         }
 
     }

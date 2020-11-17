@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System;
 using Zodiac.Lib;
 using Zodiac.Lib.Planets;
+using System.Globalization;
 
 namespace Zodiac.UnitTest
 {
@@ -25,9 +26,12 @@ namespace Zodiac.UnitTest
         [Test]
         public void PlanetGetJulDayTest()
         {
-           
-            var julDay = Planet.GetJulDay(3, 1, 1990);
-            Assert.AreEqual(2447952.0d, julDay);
+            double julDay = Planet.GetJulDay(2020, 1,1);
+            //double time = 0 + (0 / 60.0);
+            //time -= 0;
+            //julDay += time / 24.0;
+            var testVlue = 2458849.5;
+            Assert.AreEqual(testVlue, julDay);
         }
     }
 }
